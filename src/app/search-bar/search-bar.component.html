@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup">
+  <mat-form-field>
+    <input type="text"
+           placeholder="Search Tags..."
+           aria-label="Flicker feed"
+           matInput
+           [formControl]="formGroup.get('input')"
+           [matAutocomplete]="auto">
+    <mat-autocomplete [displayWith]="displayFn" #auto="matAutocomplete">
+      <mat-option (onSelectionChange)="handleSelection($event)" *ngFor="let option of filteredOptions | async" [value]="option">
+        <img height="30" width="30" src="{{option.mediaUrl}}" /> {{option.tags}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+      <button mat-button (click)="handleSearch()">Search</button>
+</form>

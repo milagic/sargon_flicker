@@ -1,0 +1,13 @@
+<mat-card class="card" *ngFor="let item of items">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>{{item.author}}</mat-card-subtitle>
+    <a [href]="item.link" target="_blank"><img mat-card-avatar [src]="item.mediaUrl" /></a>
+  </mat-card-header>
+  <mat-card-content class="tags" *ngIf="item.tags && item.tags.length > 0">
+    Tags: <p>
+    {{item.tags}}
+  </p>
+  </mat-card-content>
+</mat-card>
