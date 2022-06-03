@@ -9,7 +9,7 @@
     "zone.js": "0.10.3",
     "@types/node": "12.12.53",
     "@angular/cdk": "10.1.0",
-    "@angular/core": "10.0.5",
+    "@angular/core": "11.0.5",
     "@angular/forms": "10.0.5",
     "@types/jasmine": "3.5.11",
     "@angular/common": "10.0.5",
